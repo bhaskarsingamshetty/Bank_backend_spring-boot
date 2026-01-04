@@ -2,6 +2,7 @@ package com.demo.learn.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.demo.learn.dto.Login;
 import com.demo.learn.dto.Signup;
 import com.demo.learn.service.AuthService;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping()
 public class AuthController {

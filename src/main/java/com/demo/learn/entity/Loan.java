@@ -22,7 +22,7 @@ public class Loan {
     private String type;
 
     @Column(nullable = false)
-    private Long ammount;
+    private Long amount;
 
     @Column(nullable = false)
     private int tenure;
