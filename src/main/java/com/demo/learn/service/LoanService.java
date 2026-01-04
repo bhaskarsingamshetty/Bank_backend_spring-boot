@@ -23,7 +23,7 @@ public class LoanService {
     private CustomerRepo customerrepo;
     public ResponseEntity<?> newloan(Loandto data) {
         Loan loan = new Loan();
-        loan.setAmmount(data.getAmount());
+        loan.setAmount(data.getAmount());
         loan.setIntrestrate(data.getInterestRate());
         loan.setPrincipal_amount(data.getPrincipalAmount());
         loan.setType(data.getType());
