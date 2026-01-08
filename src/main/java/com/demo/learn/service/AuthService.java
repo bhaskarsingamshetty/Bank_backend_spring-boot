@@ -49,5 +49,9 @@ public class AuthService {
             ));
         }return ResponseEntity.badRequest().body(new ErrorResponse("wrong password"));
     }
+    public ResponseEntity<?> getname(Long id) {
+        Customer data = repo.findById(id).orElse(null);
+        return ResponseEntity.ok(data.getName());
+    }
 
 }

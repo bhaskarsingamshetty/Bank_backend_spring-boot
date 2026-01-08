@@ -19,8 +19,8 @@ public class InsuranceController {
     private InsuranceService service; 
 
     @PostMapping("/new_policy/{id}")
-    public ResponseEntity<?> addInsurrance(@RequestBody RequestPolicy data){
-        return service.addInsurrance(data);
+    public ResponseEntity<?> addInsurrance(@RequestBody RequestPolicy data,@PathVariable Long id){
+        return service.addInsurrance(data,id);
     }
 
     @GetMapping("/get_my_policy/{id}")

@@ -26,7 +26,5 @@ public class InsurancePolicy {
 
     private Double premiumAmount;
 
-    private Double sumAssured;
-
     private String status;
 }

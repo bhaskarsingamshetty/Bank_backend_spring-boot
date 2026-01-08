@@ -9,5 +9,4 @@ public class Loandto {
     private int tenure;
     private Double principalAmount;
     private Double interestRate;
-    private Long customerId;
 }

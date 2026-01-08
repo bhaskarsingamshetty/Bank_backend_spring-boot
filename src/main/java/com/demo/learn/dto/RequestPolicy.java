@@ -8,8 +8,6 @@ public class RequestPolicy {
     
     private Long productid;
 
-    private Long customerid;
-
     private Double premiumAmount;
     
 }

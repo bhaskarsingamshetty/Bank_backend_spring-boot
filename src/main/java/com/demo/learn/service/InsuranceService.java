@@ -25,12 +25,11 @@ public class InsuranceService {
     @Autowired
     private InsurancePolicyRepo repo; 
 
-    public ResponseEntity<?> addInsurrance(RequestPolicy data) {
-        InsuranceProduct product = productrepo.findById(data.getProductid()).orElse(null);
+    public ResponseEntity<?> addInsurrance(RequestPolicy data, Long id) {
         InsurancePolicy policy = new InsurancePolicy();
-        policy.setCustomer(custorepo.findById(data.getCustomerid()).orElse(null));
+        policy.setCustomer(custorepo.findById(id).orElse(null));
         policy.setPremiumAmount(data.getPremiumAmount());
-        policy.setSumAssured(product.getSumAssured());
+        policy.setProduct(productrepo.findById(id).orElse(null));
         policy.setStatus("processing");
         repo.save(policy);
         return ResponseEntity.ok(Map.of("message","apllied for insurrance"));

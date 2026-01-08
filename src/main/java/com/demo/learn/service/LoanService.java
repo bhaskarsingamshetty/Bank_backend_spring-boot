@@ -21,7 +21,7 @@ public class LoanService {
     private LoanRepo repo;
     @Autowired
     private CustomerRepo customerrepo;
-    public ResponseEntity<?> newloan(Loandto data) {
+    public ResponseEntity<?> newloan(Loandto data , Long id) {
         Loan loan = new Loan();
         loan.setAmount(data.getAmount());
         loan.setIntrestrate(data.getInterestRate());
@@ -29,7 +29,7 @@ public class LoanService {
         loan.setType(data.getType());
         loan.setTenure(data.getTenure());
         loan.setStatus("pending");
-        Customer cus = customerrepo.findById(data.getCustomerId()).orElse(null);
+        Customer cus = customerrepo.findById(id).orElse(null);
         if (cus == null) {
             return ResponseEntity.status(400).body(new ErrorResponse("create an account first"));
         }
