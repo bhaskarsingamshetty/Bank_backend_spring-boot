@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import com.demo.learn.dto.ErrorResponse;
 import com.demo.learn.dto.RequestPolicy;
 import com.demo.learn.entity.InsurancePolicy;
-import com.demo.learn.entity.InsuranceProduct;
 import com.demo.learn.repository.CustomerRepo;
 import com.demo.learn.repository.InsurancePolicyRepo;
 import com.demo.learn.repository.InsuranceProductRepo;
